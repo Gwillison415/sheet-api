@@ -10,7 +10,7 @@ describe('RootResolver model', () => {
     expect(root.spreadsheet).to.be.a('function');
   });
 
-  it('should have a sheet function', () => {
-    expect(root.sheet).to.be.a('function');
+  it('should have a sheets function', () => {
+    expect(root.sheets).to.be.a('function');
   });
 });

@@ -10,6 +10,7 @@ const root = require('./src/resolvers/RootResolver');
 const schema = require('./src/schema');
 const partials = require('express-partials');
 const cors = require('cors');
+const morgan = require('morgan');
 
 const app = express();
 
@@ -22,6 +23,7 @@ const API_BASE_URL = process.env.API_BASE_URL;
 const CALLBACK_URL = process.env.GOOGLE_SHEETS_URL;
 const PROFILE_ID = process.env.GOOGLE_SHEETS_PROFILE_ID;
 
+app.use(morgan('combined'));
 app.use('/', partials());
 app.use(cors());
 app.use(bodyParser.json());
